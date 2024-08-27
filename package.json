@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.elab.toolboxclean",                              
+  "displayName": "Eloi Toolbox Clean core",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Code from the Eloi General Toolbox that I need to use in most project but need to be clean and useable without breaking every thing.",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2021_10_03_EloiGeneralToolboxCleanCore.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
