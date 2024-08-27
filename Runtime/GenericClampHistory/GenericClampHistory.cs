@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -13,8 +15,21 @@ namespace Eloi {
 
         public void PushIn(T value) {
             if(m_historySize>0)
-            Eloi.E_GeneralUtility.ListAsQueueInsert(in value, in m_historySize, ref m_history);
+            ListAsQueueInsert(in value, in m_historySize, ref m_history);
         }
+
+        
+        public static void ListAsQueueInsert<T>(in T value, in int maxCount, ref List<T> list)
+        {
+            if (list == null)
+                return;
+            list.Insert(0, value);
+            for (int i = 0; i < list.Count - maxCount; i++)
+            {
+                list.RemoveAt(list.Count - 1);
+            }
+        }
+
 
         public T GetAt(int index) { return m_history[index]; }
         public void GetHistoryAsArray(out T[] history)
